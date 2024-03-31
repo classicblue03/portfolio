@@ -1,0 +1,322 @@
+.sc-home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* 움직이는 파티클 */
+.sc-home .bg1 {
+    position: absolute;
+    width: 30vw;
+    left: 0;
+    transform: translate(-20%, -20%);
+}
+
+.sc-home .text-area {
+    z-index: 5;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sc-home .text-area .main-tit {
+    text-align: center;
+    font-size: 104px;
+    line-height: .9;
+}
+
+.sc-home .text-area .main-tit .normal {
+    overflow: hidden;
+    display: block;
+    padding-bottom: 0.1em;
+    margin-bottom: -0.1em;
+    transform-origin: bottom;
+}
+
+.sc-home .bg2 {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-10%, 50%);
+    width: 70vw;
+}
+
+.sc-home .bg3 {
+    position: absolute;
+    width: 30vw;
+    right: 0;
+    transform: translate(-20%, 20%) rotate(30deg);
+}
+
+.sc-about {
+    height: 100vh;
+}
+
+.sc-about .sc-tit {
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+
+.sc-about .text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sc-about .text-area p {
+    max-width: 650px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.sc-about .text-area p+p {
+    margin-top: 15px;
+}
+
+
+
+.sc-project {
+    position: relative;
+    padding: 30px 0;
+}
+
+.sc-project .bg2 {
+    position: absolute;
+    z-index: -1;
+}
+
+.sc-project .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.sc-project .project-item {
+    display: flex;
+}
+
+.sc-project .project-item:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.sc-project .project-wrap {
+    width: 70%;
+}
+
+.sc-project .project-wrap .link {
+    position: relative;
+    display: block;
+    padding-bottom: 100%;
+}
+
+.sc-project .project-wrap .link img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-project .project-wrap .link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    mix-blend-mode: difference;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s cubic-bezier(1, 0.35, 0, 0.95);
+}
+
+.sc-project .project-wrap .link:hover::after {
+    transform-origin: top;
+    transform: scaleY(1);
+}
+
+.sc-project .project-info {
+    margin-top: 20px;
+}
+
+.sc-project .project-info .desc-box {
+    display: inline-block;
+    font-size: 0;
+}
+
+.sc-project .project-info .desc-box .title {
+    display: inline-block;
+    line-height: 1;
+    font-size: 38px;
+}
+
+.sc-project .project-info .desc-box .desc {
+    margin: 20px 0 5px;
+    font-size: 18px;
+}
+
+.sc-project .project-info .desc-box .period {
+    display: inline-block;
+    line-height: initial;
+    font-size: 14px;
+    color: #858585;
+}
+
+.sc-project .project-info .skill-list {
+    display: flex;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.sc-project .project-info .skill-list>li {
+    padding: 8px 15px;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 1px solid #000;
+}
+
+
+
+.sc-career {
+    position: relative;
+    margin-top: 100px;
+}
+
+.sc-career .bg1 {
+    z-index: -1;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.sc-career .sc-tit {
+    margin-bottom: 80px;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.sc-career .career-list {
+    margin: 100px 0;
+}
+
+.sc-career .career-item {
+    padding: 50px 0;
+    border-bottom: 2px solid #000;
+}
+
+.sc-career .career-item:last-child {
+    border-bottom: none;
+}
+
+.sc-career .career-item .tit-wrap {
+    display: inline-block;
+}
+
+.sc-career .career-item .tit-wrap .link {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.sc-career .career-item .tit-wrap .skill {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-right: 5px;
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #f4d450;
+    border-radius: 30px;
+}
+
+.sc-career .career-item .tit-wrap .year {
+    font-size: 14px;
+    color: #858588;
+}
+
+.sc-career .career-item .desc-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sc-career .career-item .desc {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@media screen and (max-width: 960px) {
+    .sc-home .text-area .main-tit {
+        font-size: 88px;
+    }
+
+    .sc-about {
+        height: 80vh;
+    }
+
+    .sc-about .sc-tit {
+        margin-bottom: 40px;
+    }
+
+    .sc-about .text-area p {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+
+    .sc-project .project-list {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .sc-project .project-item {
+        width: calc(100%/2 - 20px);
+    }
+
+    .sc-project .project-wrap {
+        width: 100%;
+    }
+
+    .sc-project .project-info .desc-box .title {
+        font-size: 30px;
+    }
+
+    .sc-project .project-info .desc-box .desc {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .sc-project .project-info .skill-list>li {
+        padding: 5px 10px;
+    }
+
+    .sc-career .career-item .tit-wrap {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .sc-project .project-item {
+        width: 100%;
+    }
+
+    .sc-career .career-item .tit-wrap .link {
+        font-size: 26px;
+    }
+
+    .sc-career .career-item .tit-wrap .year {
+        font-size: 14px;
+    }
+
+    .sc-career .career-item .desc-wrap .desc {
+        font-size: 16px;
+    }
+}

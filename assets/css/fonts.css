@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'Suisse';
+    src: url(../fonts/SuisseIntl-Book.woff2) format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Suisse';
+    src: url(../fonts/SuisseIntl-Bold.woff2) format('woff2');
+    font-weight: 700;
+}
