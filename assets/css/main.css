@@ -6,10 +6,27 @@
 
 /* 움직이는 파티클 */
 .sc-home .bg1 {
+    z-index: -1;
     position: absolute;
     width: 30vw;
     left: 0;
-    transform: translate(-20%, -20%);
+    transform: translate(-20%, 20%);
+}
+
+.sc-home .bg2 {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-10%, -50%);
+    width: 70vw;
+}
+
+.sc-home .bg3 {
+    position: absolute;
+    width: 30vw;
+    right: 0;
+    transform: translate(-20%, 40%) rotate(30deg);
 }
 
 .sc-home .text-area {
@@ -33,22 +50,6 @@
     padding-bottom: 0.1em;
     margin-bottom: -0.1em;
     transform-origin: bottom;
-}
-
-.sc-home .bg2 {
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: translate(-10%, 50%);
-    width: 70vw;
-}
-
-.sc-home .bg3 {
-    position: absolute;
-    width: 30vw;
-    right: 0;
-    transform: translate(-20%, 20%) rotate(30deg);
 }
 
 .sc-about {
@@ -77,16 +78,15 @@
     margin-top: 15px;
 }
 
-
-
 .sc-project {
     position: relative;
     padding: 30px 0;
 }
 
 .sc-project .bg2 {
-    position: absolute;
     z-index: -1;
+    position: absolute;
+    transform: translate(0%, -100%);
 }
 
 .sc-project .project-list {
@@ -180,8 +180,6 @@
     border-radius: 20px;
     border: 1px solid #000;
 }
-
-
 
 .sc-career {
     position: relative;
