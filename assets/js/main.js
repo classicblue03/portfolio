@@ -23,11 +23,11 @@ gsap.to('.sc-home .bg1', {
     scrollTrigger: {
         trigger: ".sc-home .bg1",
         start: "0% 100%",
-        end: "100% 0%",
+        end: "50% 0%",
         // markers: true,
         scrub: 0,
     },
-    yPercent: -70
+    yPercent: -40
 });
 
 gsap.to('.sc-home .bg2', {
@@ -38,7 +38,7 @@ gsap.to('.sc-home .bg2', {
         // markers: true,
         scrub: 0,
     },
-    yPercent: 70
+    yPercent: 100
 });
 
 gsap.to('.sc-home .bg3', {
@@ -46,9 +46,10 @@ gsap.to('.sc-home .bg3', {
         trigger: ".sc-home .bg3",
         start: "0% 100%",
         end: "100% 0%",
+        // markers: true,
         scrub: 0,
     },
-    yPercent: -40
+    yPercent: -20
 });
 
 gsap.to('.sc-project .bg2', {
@@ -58,7 +59,7 @@ gsap.to('.sc-project .bg2', {
         end: "100% 0%",
         scrub: 0,
     },
-    yPercent: 90
+    yPercent: 40
 });
 
 gsap.to('.sc-career .bg1', {

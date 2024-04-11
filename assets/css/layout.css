@@ -12,17 +12,8 @@
     top: 2.5em;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 1rem;
 }
-
-/* .header .link-area .link-velog {
-    position: absolute;
-    top: 2.5em;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #14B885;
-    font-size: 20px;
-    font-weight: 700;
-} */
 
 .header .link-area .link:hover {
     opacity: .5;

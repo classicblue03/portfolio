@@ -4,13 +4,14 @@
     height: 100vh;
 }
 
-/* 움직이는 파티클 */
 .sc-home .bg1 {
     z-index: -1;
     position: absolute;
-    width: 30vw;
     left: 0;
-    transform: translate(-20%, 20%);
+    bottom: 0;
+    width: 30vw;
+    transform: translate(-20%, 0);
+    /* translate(-20%, -20%) */
 }
 
 .sc-home .bg2 {
@@ -18,15 +19,15 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: translate(-10%, -50%);
-    width: 70vw;
 }
 
 .sc-home .bg3 {
     position: absolute;
-    width: 30vw;
     right: 0;
-    transform: translate(-20%, 40%) rotate(30deg);
+    width: 22vw;
+    /* 30vw */
+    transform: translate(-20%, 10%) rotate(30deg);
+    /* translate(-20%, 20%) rotate(30deg); */
 }
 
 .sc-home .text-area {
@@ -40,53 +41,44 @@
 
 .sc-home .text-area .main-tit {
     text-align: center;
-    font-size: 104px;
-    line-height: .9;
-}
-
-.sc-home .text-area .main-tit .normal {
-    overflow: hidden;
-    display: block;
-    padding-bottom: 0.1em;
-    margin-bottom: -0.1em;
-    transform-origin: bottom;
+    font-size: 6.5rem;
+    /* 104px */
 }
 
 .sc-about {
     height: 100vh;
 }
 
-.sc-about .sc-tit {
-    font-size: 60px;
-    text-transform: uppercase;
+.sc-about .group-about .sc-tit {
     margin-bottom: 80px;
+    font-size: 3.75rem;
+    /* 60px */
+    text-transform: uppercase;
 }
 
-.sc-about .text-area {
+.sc-about .group-about .text-area {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    width: 80vw;
+    gap: 15px;
 }
 
-.sc-about .text-area p {
+.sc-about .group-about .text-area .desc {
     max-width: 650px;
     line-height: 1.8;
-    font-size: 18px;
-}
-
-.sc-about .text-area p+p {
-    margin-top: 15px;
+    font-size: 1.125rem;
 }
 
 .sc-project {
     position: relative;
-    padding: 30px 0;
+    padding-top: 30px;
 }
 
 .sc-project .bg2 {
     z-index: -1;
     position: absolute;
-    transform: translate(0%, -100%);
+    /* translate(0%, 20%);
+    translate(0%, -100%); */
 }
 
 .sc-project .project-list {
@@ -103,26 +95,17 @@
     justify-content: flex-end;
 }
 
-.sc-project .project-wrap {
+.sc-project .project-item .project-wrap {
     width: 70%;
 }
 
-.sc-project .project-wrap .link {
+.sc-project .project-item .project-wrap .link {
     position: relative;
     display: block;
     padding-bottom: 100%;
 }
 
-.sc-project .project-wrap .link img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.sc-project .project-wrap .link::after {
+.sc-project .project-item .project-wrap .link::after {
     content: '';
     position: absolute;
     top: 0;
@@ -136,54 +119,58 @@
     transition: transform 0.5s cubic-bezier(1, 0.35, 0, 0.95);
 }
 
-.sc-project .project-wrap .link:hover::after {
+.sc-project .project-item .project-wrap .link:hover::after {
     transform-origin: top;
     transform: scaleY(1);
 }
 
-.sc-project .project-info {
-    margin-top: 20px;
+.sc-project .project-item .project-wrap .link img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.sc-project .project-info .desc-box {
+.sc-project .project-item .desc-box {
+    margin: 20px 0 30px;
+}
+
+.sc-project .project-item .desc-box .title {
     display: inline-block;
-    font-size: 0;
+    margin-bottom: 20px;
+    font-size: 2.375rem;
 }
 
-.sc-project .project-info .desc-box .title {
+.sc-project .project-item .desc-box .desc {
+    line-height: 150%;
+    font-size: 1.125rem;
+}
+
+/* .sc-project .project-item .desc-box .period {
     display: inline-block;
-    line-height: 1;
-    font-size: 38px;
-}
-
-.sc-project .project-info .desc-box .desc {
-    margin: 20px 0 5px;
-    font-size: 18px;
-}
-
-.sc-project .project-info .desc-box .period {
-    display: inline-block;
-    line-height: initial;
-    font-size: 14px;
+    font-size: .875rem;
     color: #858585;
-}
+} */
 
-.sc-project .project-info .skill-list {
-    display: flex;
-    gap: 8px;
-    margin-top: 30px;
-}
-
-.sc-project .project-info .skill-list>li {
+.sc-project .project-item .link-velog {
+    display: inline-block;
     padding: 8px 15px;
-    font-size: 12px;
+    font-size: .75rem;
     border-radius: 20px;
     border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.sc-project .project-item .link-velog:hover {
+    border: 1px solid transparent;
+    background: #2ed06e;
 }
 
 .sc-career {
     position: relative;
-    margin-top: 100px;
+    padding: 100px 0;
 }
 
 .sc-career .bg1 {
@@ -192,81 +179,110 @@
     transform: translateY(-50%);
 }
 
-.sc-career .sc-tit {
+.sc-career .group-career .sc-tit {
     margin-bottom: 80px;
-    font-size: 60px;
-    text-transform: uppercase;
+    font-size: 3.75rem;
 }
 
-.sc-career .career-list {
-    margin: 100px 0;
+.sc-career .group-career .career-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
-.sc-career .career-item {
-    padding: 50px 0;
-    border-bottom: 2px solid #000;
+.sc-career .group-career .career-list .bar {
+    width: 100%;
+    height: 2px;
+    background: #000;
 }
 
-.sc-career .career-item:last-child {
+.sc-career .group-career .career-item:last-child {
     border-bottom: none;
 }
 
-.sc-career .career-item .tit-wrap {
+.sc-career .group-career .career-item .link {
+    position: relative;
     display: inline-block;
-}
-
-.sc-career .career-item .tit-wrap .link {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-size: 32px;
+    margin-bottom: 20px;
+    font-size: 2rem;
     font-weight: 600;
 }
 
-.sc-career .career-item .tit-wrap .skill {
+.sc-career .group-career .career-item .link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: #000;
+    -webkit-transition: width .3s ease;
+    transition: width .3s ease;
+}
+
+.sc-career .group-career .career-item .link:hover::before {
+    width: 100%;
+}
+
+.sc-career .group-career .career-item .info-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sc-career .group-career .career-item .info-box .skill {
     display: inline-block;
     padding: 8px 15px;
-    margin-right: 5px;
+    font-size: 0.75rem;
     color: #000;
-    font-size: 16px;
-    text-transform: uppercase;
     background: #f4d450;
     border-radius: 30px;
 }
 
-.sc-career .career-item .tit-wrap .year {
-    font-size: 14px;
+.sc-career .group-career .career-item .info-box .year {
+    font-size: .875rem;
     color: #858588;
 }
 
-.sc-career .career-item .desc-wrap {
+.sc-career .group-career .career-item .desc-wrap {
     display: flex;
     justify-content: flex-end;
 }
 
-.sc-career .career-item .desc {
+.sc-career .group-career .career-item .desc-wrap .desc {
     max-width: 500px;
-    font-size: 18px;
-    line-height: 1.8;
+    line-height: 150%;
+    font-size: 1.125rem;
+}
+
+@media screen and (max-width: 1230px) {
+    .sc-project .project-item .desc-box .desc br {
+        content: initial;
+    }
 }
 
 @media screen and (max-width: 960px) {
     .sc-home .text-area .main-tit {
-        font-size: 88px;
+        font-size: 5rem;
     }
 
     .sc-about {
-        height: 80vh;
+        height: auto;
+        padding-bottom: 40px;
     }
 
-    .sc-about .sc-tit {
+    .sc-about .group-about .sc-tit {
         margin-bottom: 40px;
     }
 
-    .sc-about .text-area p {
+    .sc-about .group-about .text-area {
+        width: 100%;
+    }
+
+    .sc-about .group-about .text-area .desc {
         max-width: 100%;
         font-size: 15px;
     }
-
 
     .sc-project .project-list {
         flex-wrap: wrap;
@@ -278,43 +294,42 @@
         width: calc(100%/2 - 20px);
     }
 
-    .sc-project .project-wrap {
+    .sc-project .project-item .project-wrap {
         width: 100%;
     }
 
-    .sc-project .project-info .desc-box .title {
-        font-size: 30px;
+    .sc-project .project-item .desc-box .title {
+        font-size: 1.7rem;
     }
 
-    .sc-project .project-info .desc-box .desc {
+    .sc-project .project-item .desc-box .desc {
+        font-size: 1rem;
+    }
+
+    .sc-career .group-career .sc-tit {
+        font-size: 3.5rem;
+    }
+
+    .sc-career .group-career .career-item .tit-wrap {
+        margin-bottom: 10px;
+    }
+
+    .sc-career .group-career .career-item .desc-wrap .desc {
         max-width: 100%;
-        font-size: 14px;
+        font-size: 1rem;
     }
 
-    .sc-project .project-info .skill-list>li {
-        padding: 5px 10px;
-    }
-
-    .sc-career .career-item .tit-wrap {
-        margin-bottom: 20px;
+    .sc-career .group-career .career-item .link {
+        font-size: 1.8rem;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .sc-project .project-item {
         width: 100%;
     }
 
-    .sc-career .career-item .tit-wrap .link {
-        font-size: 26px;
-    }
-
-    .sc-career .career-item .tit-wrap .year {
-        font-size: 14px;
-    }
-
-    .sc-career .career-item .desc-wrap .desc {
-        font-size: 16px;
+    .sc-career .group-career .career-item .desc-wrap {
+        justify-content: flex-start;
     }
 }
