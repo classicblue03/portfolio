@@ -11,7 +11,6 @@
     bottom: 0;
     width: 30vw;
     transform: translate(-20%, 0);
-    /* translate(-20%, -20%) */
 }
 
 .sc-home .bg2 {
@@ -25,9 +24,7 @@
     position: absolute;
     right: 0;
     width: 22vw;
-    /* 30vw */
     transform: translate(-20%, 10%) rotate(30deg);
-    /* translate(-20%, 20%) rotate(30deg); */
 }
 
 .sc-home .text-area {
@@ -42,7 +39,6 @@
 .sc-home .text-area .main-tit {
     text-align: center;
     font-size: 6.5rem;
-    /* 104px */
 }
 
 .sc-about {
@@ -52,19 +48,17 @@
 .sc-about .group-about .sc-tit {
     margin-bottom: 80px;
     font-size: 3.75rem;
-    /* 60px */
     text-transform: uppercase;
 }
 
 .sc-about .group-about .text-area {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 92.3%;
     gap: 15px;
 }
 
 .sc-about .group-about .text-area .desc {
-    max-width: 650px;
     line-height: 1.8;
     font-size: 1.125rem;
 }
@@ -77,8 +71,6 @@
 .sc-project .bg2 {
     z-index: -1;
     position: absolute;
-    /* translate(0%, 20%);
-    translate(0%, -100%); */
 }
 
 .sc-project .project-list {
@@ -147,12 +139,6 @@
     line-height: 150%;
     font-size: 1.125rem;
 }
-
-/* .sc-project .project-item .desc-box .period {
-    display: inline-block;
-    font-size: .875rem;
-    color: #858585;
-} */
 
 .sc-project .project-item .link-velog {
     display: inline-block;
